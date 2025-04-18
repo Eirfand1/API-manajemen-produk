@@ -8,6 +8,7 @@ API ini digunakan untuk mengelola data produk dan supplier, serta terhubung ke s
 - Pisahkan Route dengan handler
 - Tambahkan Validasi jika perlu
 - Tambahkan response status success/gagal beserta error codenya
+- Tambahkan update semuanya untuk produk dan supplier
 
 ## 🛠 Base URL
 ```
@@ -48,7 +49,14 @@ name=macha&stock=4000&supplier_id=1
 ```json
 {
   "success": true,
-  "data": [ { "id": 2, "name": "macha", "stock": 4000, "supplier_id": 1 } ]
+  "data": [
+    {
+        "id": 2,
+        "name": "macha",
+        "stock": 4000,
+        "supplier_id": 1
+    }
+  ]
 }
 ```
 
@@ -57,7 +65,12 @@ Tandai produk sebagai stok rendah.
 
 **Response:**
 ```json
-[ { "id": 2, "is_low_stock": true } ]
+[
+    {
+        "id": 2,
+        "is_low_stock": true
+    }
+]
 ```
 
 ### 🔹 DELETE `/product/{id}`
@@ -65,7 +78,12 @@ Hapus produk berdasarkan ID.
 
 **Response:**
 ```json
-[ { "id": 2, "name": "macha" } ]
+[
+    {
+        "id": 2,
+        "name": "macha"
+    }
+]
 ```
 
 ---
@@ -85,7 +103,15 @@ name=PT Cina sejati&phone=08992040913&address=Jl Jambu&email=egoirfan123@gmail.c
 ```json
 {
   "success": true,
-  "data": [ { "id": 1, "name": "PT Cina sejati", ... } ]
+  "data": [
+  {
+      "id": 1,
+      "name": "PT Cina sejati",
+      "phone": "081392815769",
+      "address": "jl jambu",
+      "email": "exostix123@gmail.com"
+      }
+  ]
 }
 ```
 
