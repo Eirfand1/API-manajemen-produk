@@ -12,7 +12,6 @@ const getAllProductsHandler = async (req, h) => {
 		}
 
 		return h.response({
-			code: 200,
 			success: true,
 			data: query
 		}).code(200)
